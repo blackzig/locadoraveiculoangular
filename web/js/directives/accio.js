@@ -35,7 +35,7 @@ app.directive('walterwhite', function () {
         }
     };
             
-})
+});
 
 //.directive('theshield', function () {
 //
