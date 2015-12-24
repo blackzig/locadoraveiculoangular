@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Locadora de Automóveis</title>
+        <meta charset="ISO-8859-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../recursos/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../recursos/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <div class="container" ng-app="locadoramain">
+        <!-- register 'my-template.html' with $templateCache -->
+        <script type="text/ng-template" id="my-template.html">
+            <div ng-repeat="num in [1,2,3,4,5]">{{ num }}</div>
+        </script>  
+
+        <!-- your custom element -->
+        <my-directive></my-directive>
+
+        <element-directive some-attr="myvalue">
+            <!-- directive's HTML contents -->
+        </element-directive>
+
+        <div attribute-directive="aval" some-attr="myvalue">
+        </div>
+
+        <div class="class-directive: cval; normal-class" some-attr="myvalue">
+        </div>
+
+        <!-- directive: comment-directive val1 val2 val3 -->
+
+        <button counter></button>
+        <button counter incr="5"></button>
+
+        <div buffer="300" 
+             vector-text>
+        </div>
+
+        <!-- 
+                <div ng-controller="MainCtrl">
+                    <div>Outer: {{ outerval}}</div>
+                    <div iso myattr="{{ outerval}}"></div>
+                </div>
+        -->  
+        <div ng-controller="MainCtrl">
+            <div iso myattr="func()"></div>
+        </div>
+
+        <div parent-directive>
+            <div child-directive sibling-directive>
+            </div>
+        </div>
+        
+    </div> <!-- fim container -->  
+    <script src="../recursos/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="../recursos/bootstrap-3.3.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../recursos/angular1.4.min.js" type="text/javascript"></script>
+
+    <script src="../js/services/main.js" type="text/javascript"></script>
+
+    <!-- Directives -->
+    <script src="../js/directives/exemplo1.js" type="text/javascript"></script>
+
+    <!-- Controller -->
+    <script src="../js/controller/controllerexemplo1.js" type="text/javascript"></script>
+</html>
