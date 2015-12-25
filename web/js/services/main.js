@@ -1,3 +1,3 @@
-var app = angular.module('locadoramain', []);
+var app = angular.module('locadoramain', ['ngRoute']);
 
 

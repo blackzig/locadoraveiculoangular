@@ -35,8 +35,37 @@ app.directive('walterwhite', function () {
         }
     };
             
+})
+.directive('elementrest', function () {
+  
+    return{
+        restrict: 'E',
+        link: function () {
+            console.log('I am a element');
+        }
+    };
+            
+})
+.directive('classrest', function () {
+  
+    return{
+        restrict: 'C',
+        link: function () {
+            console.log('I am a class');
+        }
+    };
+            
+})
+.directive('commentrest', function () {
+  
+    return{
+        restrict: 'M',
+        link: function () {
+            console.log('I am a comment restriction');
+        }
+    };
+            
 });
-
 //.directive('theshield', function () {
 //
 //    return{

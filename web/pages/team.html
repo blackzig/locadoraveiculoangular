@@ -14,37 +14,29 @@ and open the template in the editor.
     </head>
 
     <div class="container" data-ng-app="locadoramain">
+        <h1>Baltimore Ravens</h1>
         
-        <div restrictions>Attribute Restriction</div>
+        <input type="text" data-ng-model="searchTeam">
         
-        <elementrest>Element Restriction</elementrest>
-        
-        <div class="classrest">Class Restriction</div>
-        
-        <!-- directive: commentrest -->
-        <div></div>
-
-        <walterwhite></walterwhite>
-        <p></p>
-        
-        <div interactive-btn class="btn btn-default" >Button</div>
-
-     <!--   <theshield reigns rollins ambrose class="btn btn-default">
-            Access The Shield
-        </theshield>
-
-        <theshield reigns class="btn btn-default">
-            Click Reigns
-        </theshield>
-
-        <theshield rollins class="btn btn-default">
-            Click Rollins
-        </theshield>
-
-        <theshield ambrose class="btn btn-default">
-            Click Ambrose
-        </theshield>-->
-
+        <div data-ng-controller="ravensCtrl" >
+            <table class="table table-striped" >
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Position</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="player in players | filter:searchTeam | 
+                                orderBy:'name' | limitTo:3">
+                        <td>{{player.name}}</td>
+                        <td>{{player.position}}</td>
+                        <td>{{player.number}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div> <!-- fim container -->  
 
     <script src="../recursos/jquery-2.1.4.min.js" type="text/javascript"></script>
@@ -54,9 +46,12 @@ and open the template in the editor.
     <script src="../js/services/main.js" type="text/javascript"></script>
 
     <!-- Controllers -->
-    <script src="../js/controller/controlleraccio.js" type="text/javascript"></script>
+
 
     <!-- Directives -->
-    <script src="../js/directives/accio.js" type="text/javascript"></script>
+
+
+    <!-- Services -->   
+    <script src="../js/services/ravensService.js" type="text/javascript"></script>
 
 </html>
