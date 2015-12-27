@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Locadora de Automóveis</title>
+        <meta charset="ISO-8859-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="recursos/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="recursos/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="recursos/css/styles.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <div class="container" ng-app="locadoramain">
+        <h1>Features</h1>
+        
+        <div data-ng-controller="AppCtrl">
+            <div class="BoxContainer" style="background-color: {{color}}">
+                X
+            </div>
+        </div>
+
+        <div data-ng-view></div>
+    </div> <!-- fim container -->  
+
+    <script src="recursos/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="recursos/bootstrap-3.3.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="recursos/angular1.4.min.js" type="text/javascript"></script>
+
+    <script src="js/services/main.js" type="text/javascript"></script>
+    <script src="recursos/angular-route.js" type="text/javascript"></script>
+
+
+
+    <!-- Controllers -->
+    <script src="js/controller/configSample.js" type="text/javascript"></script>
+    <script src="js/controller/calendar.js" type="text/javascript"></script>
+
+    <!-- Services -->
+    <script src="js/services/a_config.js" type="text/javascript"></script>
+    <script src="js/services/customProvider.js" type="text/javascript"></script>
+
+</html>
