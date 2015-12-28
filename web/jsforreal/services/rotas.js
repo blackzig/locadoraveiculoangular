@@ -7,7 +7,8 @@ app.config(function ($routeProvider) {
                     })
             .when('/fabricantes',
                     {
-                        templateUrl: "partialsforreal/fabricantes.html"
+                        templateUrl: "partialsforreal/fabricantes.html",
+                        controller: "FabricanteController"
                     })
             .when('/characters',
                     {
