@@ -2,9 +2,10 @@
 <div class="container">
 
     <h2>Novo Fabricante</h2>
-    <!--<button class="btn btn-success navbar-btn">Pesquisa</button>-->
 
     <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
+
+    <button data-ng-click="pesquisaFabricantes()" class="btn btn-primary">Pesquisa</button>
 
     <form novalidate name="formFabricante" class="row" data-ng-submit="salvarFabricante(fabricante)">
         <nav class="navbar-btn navbar-inverse">

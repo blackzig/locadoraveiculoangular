@@ -1,7 +1,9 @@
 app.controller('FabricanteController', function ($scope, $http) {
 
     $scope.fabricante = {};
+    $scope.busca = {};
     $scope.mensagem = '';
+    $scope.fabricantes = [];
 
     $scope.salvarFabricante = function () {
         if ($scope.formFabricante.$valid) {
@@ -22,18 +24,29 @@ app.controller('FabricanteController', function ($scope, $http) {
 
     };
 
-//    $scope.salvarFabricante = function (fabricante) {
-//        console.log("fabricante: " + $scope.fabricante.nome);
-//        FabricanteServico.adicionarFabricante(fabricante).then(sucessoSalvar, erroSalvar);
-//    };
-//    
-//    var sucessoSalvar = function(data){
-//      console.log("salvar OK "+data);  
-//    };
-//    
-//    var erroSalvar = function(data){
-//      console.log("erro ao salvar "+data);   
-//    };
+    $scope.buscarFabricante = function () {
+        if (!$scope.busca.nome) {
+            $http.get('/locadoraveiculo/rest/fabricante/todos')
+                    .success(function (fabricantes) {
+                        $scope.fabricantes = fabricantes;
+                        //$scope.mensagem = "Resultados encontrados.";
+                    })
+                    .error(function (erro) {
+                        $scope.mensagem = "Não foi possível realizar a pesquisa.";
+                        console.log(erro);
+                    });
+        }
+        else {
+            console.log("busca " + $scope.busca.nome);
+        }
+
+    };
+
+    $scope.pesquisaFabricantes = function () {
+        location.href = '#/pesquisa-fabricantes';
+    };
+
+
 
 });
 

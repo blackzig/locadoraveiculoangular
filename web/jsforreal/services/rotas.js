@@ -10,12 +10,13 @@ app.config(function ($routeProvider) {
                         templateUrl: "partialsforreal/fabricantes.html",
                         controller: "FabricanteController"
                     })
-            .when('/characters',
+            .when('/pesquisa-fabricantes',
                     {
-                       // templateUrl: "partials/characters.html"
+                        templateUrl: "partialsforreal/pesquisa-fabricantes.html",
+                        controller: "FabricanteController"
                     })
             .otherwise({
                 redirectTo: "/",
-                templateUrl: "partials/home.html"
+                templateUrl: "partialsforreal/home.html"
             });
 });
