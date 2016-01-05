@@ -10,6 +10,11 @@ app.config(function ($routeProvider) {
                         templateUrl: "partialsforreal/fabricantes.html",
                         controller: "FabricanteController"
                     })
+            .when('/fabricantes/:idFabricante',
+                    {
+                        templateUrl: "partialsforreal/fabricantes.html",
+                        controller: "FabricanteController"
+                    })
             .when('/pesquisa-fabricantes',
                     {
                         templateUrl: "partialsforreal/pesquisa-fabricantes.html",

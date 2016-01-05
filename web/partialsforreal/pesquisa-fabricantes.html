@@ -19,14 +19,18 @@
                 <th><label style="color:#0404b4; font-family: Arial; font-size: 14px">Nome</label></th>
                 <th><label style="color:#0404b4; font-family: Arial; font-size: 14px">Editar</label></th>
                 <th><label style="color:#0404b4; font-family: Arial; font-size: 14px">Remover</label></th>
-            </tr>
+            </tr> 
         </thead>
         <tbody>
             <tr data-ng-repeat="fabricante in fabricantes">
-                <td align="center">{{fabricante.codigo}}</td>
-                <td align="center">{{fabricante.nome}}</td>
-                <td align="center">editar</td>
-                <td align="center">remover</td>
+                <td width="10" align="center">{{fabricante.codigo}}</td>
+                <td align="left">{{fabricante.nome}}</td>
+                <td width="10" align="center">
+                    <button data-ng-click="editarFabricante(fabricante)" 
+                            class="btn bg-success glyphicon glyphicon-pencil"></button></td>
+                <td width="10" align="center">
+                    <button data-ng-click="excluirFabricante(fabricante)" 
+                            class="btn bg-danger glyphicon glyphicon-trash"></button></td>
             </tr>
         </tbody>
     </table>
